@@ -47,15 +47,15 @@ while True:
 
         elif valor > 0:
             saldo -= valor
-        extrato += f"Saque: R$ {valor:.2f}\n"
-        numero_saques +=1
+            extrato += f"Saque: R$ {valor:.2f}\n"
+            numero_saques +=1
 
         else:
             print("Operação falhou! O valor informado é inválido.")
 
     elif opcao == "e":
         print("\n============= EXTRATO ==============")
-        print("Não foram realizadas movimentações." if not extrato else)
+        print("Não foram realizadas movimentações." if not extrato else extrato)
         print(f"\nSALDO: R$ {saldo:.2f}")
         print("===============================================")
 
